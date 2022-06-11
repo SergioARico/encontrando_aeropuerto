@@ -61,7 +61,7 @@ confirmed_airports.show()
 # %%
 # Targeted countries list 
 targeted_count = df_join.filter((df_join.country == "United States") | (df_join.country == "Mexico") \
-    | (df_join.country == "Brazil") | (df_join.country == "Canda") | (df_join.country == "Japan"))
+    | (df_join.country == "Brazil") | (df_join.country == "Canada") | (df_join.country == "Japan"))
 
 print("lista de paises objetivo: {}".format(targeted_count.count()))
 targeted_count.show()
@@ -78,11 +78,7 @@ suspect_countries.show()
 # All in one filter
 entire_list = df_join.filter(((df_join.airport_id%2) > 0) \
     | (df_join.country == "United States") | (df_join.country == "Mexico") \
-    | (df_join.country == "Brazil") | (df_join.country == "Canda") | (df_join.country == "Japan"))
+    | (df_join.country == "Brazil") | (df_join.country == "Canada") | (df_join.country == "Japan"))
 
+print("Aeropuertos en riesgo: {}".format(entire_list.count()))
 entire_list.show()
-
-
-# %%
-entire_list.count()
-# %%
