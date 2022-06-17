@@ -82,3 +82,5 @@ entire_list = df_join.filter(((df_join.airport_id%2) > 0) \
 
 print("Aeropuertos en riesgo: {}".format(entire_list.count()))
 entire_list.show()
+
+# %%
